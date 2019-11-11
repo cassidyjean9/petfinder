@@ -36,7 +36,7 @@ $(".pet-form").on("submit", function (event) {
         activity: $("question7-pet").val(),
         kid_friendly: $("question8-pet").val()
     };
-if ($("question8-pet").val()) {
+if ($("question9-pet").val()) {
     newPet.pet_picture = $("question9-pet").val().trim()
 }
 
