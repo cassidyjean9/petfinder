@@ -1,3 +1,10 @@
+var express = require("express");
+var exphbs = require("express-handlebars");
+//Putting express functions into app
+var app = express();
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 var db = require("../models");
 
 module.exports = function(app) {
@@ -15,20 +22,22 @@ module.exports = function(app) {
     });
     // create new pet record
     app.post("/api/pets", function(req, res) {
+        console.log('addng a pet');
         db.Pets.create(req.body).then(function(response) {
             //logic for matches
             
-            res.redirect("/partials/results-humans", 
+            res.render("partials/results-humans" 
             // object of matches to pass to handlebars
             )
         });
     });
     // create new human record
     app.post("/api/humans", function(req, res) {
+        console.log('req.body', req.body);
         db.Humans.create(req.body).then(function(response) {
             //logic for matches
             
-            res.redirect("/partials/results-pets", 
+            res.render("partials/results-pets"
             // object of matches to pass to handlebars
             )
         });

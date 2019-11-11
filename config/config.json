@@ -10,15 +10,15 @@
   "test": {
     "username": "root",
     "password": "",
-    "database": "pettle",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "",
+    "username": "root",
     "password": "",
-    "database": "pettle",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

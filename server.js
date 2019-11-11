@@ -20,12 +20,13 @@ app.set("view engine", "handlebars");
 
 // Application Routes for separation of work being put into a variable
 htmlRoutes = require(path.join(__dirname, 'controller/htmlRoutes'));
-//apiRoutes = require(path.join(__dirname, 'controller/apiRoutes'));
+apiRoutes = require(path.join(__dirname, 'controller/apiRoutes'));
 
 // Shorthand to pass to the server the Routes. Will enable this once we have the pages
 htmlRoutes(app);
-//apiRoutes(app);
+apiRoutes(app);
 
+var db = require("./models");
 
 // Starts the server to begin listening
 // =============================================================
